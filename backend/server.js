@@ -4,17 +4,21 @@ const db = require('./db/db');
 
 const app = express();
 
-//routers
 
 //built-in middlewares
 app.use(express.json());
+
+//routers
+const usersRouter = require("./routers/routes/users");
 
 //third-party middleware
 app.use(cors());
 
 //app routers
+app.use(usersRouter);
 
-const PORT = process.env.PORT || 5000;
+
+const PORT = 8000;
 
 app.listen(PORT, () => {
 	console.log(`Server On ${PORT}`);
