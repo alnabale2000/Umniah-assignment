@@ -1,7 +1,6 @@
 const connection = require("./../../db/db");
 
 const getUserActivity =(req,res)=>{
-    console.log('t1');
     const id=req.params.id;
     const query='SELECT * FROM user_activity WHERE userId =?;';
     const data=[id];
@@ -18,7 +17,7 @@ const addActivity =(req,res)=>{
     const data=[userId,type,time,details]
     connection.query(query,data,(err,result)=>{
         if(err)res.status(404).json(err)
-        res.status(201).json(userId);
+        res.status(201).json(result);
     })
 }
 

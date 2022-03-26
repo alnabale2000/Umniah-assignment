@@ -17,28 +17,32 @@ const SignUp = () => {
             if (!username || !email || !password ||!phoneNumber) {
                 setMessage("Please fill all the info");
             } else {
-                await axios
-                    .post("http://localhost:8000/users", {
-                        username,
-                        email,
-                        password,
-                    })
-                    .then((response) => {
-                        if (response) {
-                            console.log('response', response.data);
-                            setMessage("The user has been created successfully ");
+                const response= await axios.post("http://localhost:8000/users", {
+                            username,
+                            email,
+                            password,
+                });
+                if(response){
+                        console.log('response', response.data);
+                        setMessage("The user has been created successfully ");
 
-                            // Add Registration To User Activities
-                            // axios.post("http://localhost:8000/user-activity",{
-
-                            // })
-                            setTimeout(()=> {
-                                navigate("/login");
-                            }, 2000);
-                        } else {
-                            setMessage("Error happened while register, please try again");
-                        }
-                    });
+                        const result=await axios.get(`http://localhost:8000/user/${email}`);
+                        const userId= result.data[0].id
+                                    
+                        // Add Registration To User Activities
+                        axios.post("http://localhost:8000/user-activity",{
+                            userId,
+                            type:'Account Created',
+                            details:'No Details'
+                        })
+                        setTimeout(()=> {
+                            navigate("/login");
+                        }, 2300);
+                }
+                else {
+                    setMessage("Error happened while register, please try again");
+                }
+                
             }
         } catch (error) {
             setMessage("Error 5000 happened while register, please try again");
@@ -61,7 +65,6 @@ const SignUp = () => {
             <div className="login-box">
                 <h2 className="login-top-text">SIGN UP</h2>
                 <form onSubmit={handleSubmit}>
-                   
                     <div className="login-input-box">
                         <label className="login-label">Email</label>
                         <br />

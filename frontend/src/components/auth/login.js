@@ -41,7 +41,7 @@ const Login = () => {
                     
                     localStorage.setItem("id", user.userId);
 
-                            // Add Registration To User Activities
+                            // Add Login To User Activities
                             axios.post("http://localhost:8000/user-activity",{
                                 userId:user.userId,
                                 type:'Log in',

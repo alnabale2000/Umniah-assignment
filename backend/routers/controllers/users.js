@@ -18,7 +18,17 @@ const createNewAccount = async (req, res) => {
         res.status(404).json("Failed to create Account");
     }
 };
-
+const getId = (req,res)=>{
+    console.log('hi get id');
+    const email=req.params.email;
+    console.log('email', email);
+    const query= 'SELECT id FROM users WHERE email =?;';
+    const data=[email];
+    connection.query(query,data,(err,result)=>{
+        if(err) res.status(404).json(err)
+        res.status(200).json(result)
+    });
+}
 const getUserData = (req,res)=>{
     const id=req.params.id;
     const query= 'SELECT username,email,phoneNumber FROM users WHERE id =?;';
@@ -32,4 +42,5 @@ const getUserData = (req,res)=>{
 module.exports = {
     createNewAccount,
     getUserData,
+    getId,
 };

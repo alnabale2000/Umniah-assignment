@@ -32,6 +32,7 @@ const Navigation = () => {
     }, []);
 
     const loggedOut = async () => {
+      // Add Logout To User Activities
       await axios.post("http://localhost:8000/user-activity",{
         userId:id,
         type:'Log Out',
