@@ -17,7 +17,7 @@ CREATE TABLE user_activity (
     userId INT ,
     activity_type VARCHAR(255),
     created_at DATETIME,
-    more_details VARCHAR(255),
+    more_details VARCHAR(255) DEFAULT "No Details.",
     PRIMARY KEY (id),
     FOREIGN KEY (userId) REFERENCES users(id)
 );
