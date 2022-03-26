@@ -2,7 +2,6 @@ const connection = require("./../../db/db");
 const bcrypt = require("bcrypt");
 
 const createNewAccount = async (req, res) => {
-    console.log('t1 create user');
     const { username, email, password, phoneNumber } = req.body;
     try {
         const hashedPassword = await bcrypt.hash(password, 10);

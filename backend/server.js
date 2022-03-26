@@ -10,12 +10,13 @@ app.use(express.json());
 
 //routers
 const usersRouter = require("./routers/routes/users");
-
+const authRouter = require ("./routers/routes/auth")
 //third-party middleware
 app.use(cors());
 
 //app routers
 app.use(usersRouter);
+app.use(authRouter)
 
 
 const PORT = 8000;
