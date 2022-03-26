@@ -51,10 +51,7 @@ const Login = () => {
                     }
                 } else {
                     setMessage("Error happened while login, please try again");
-                    openPopUb()
-                    setTimeout(() => {
-                        setMessage("");
-                    }, 3000);
+                    openPopUb();
                 }
             })
             .catch((err) => {
@@ -94,7 +91,6 @@ const Login = () => {
                     </button>
                     <div className="divider"></div>
 
-                    {/* Avoiding extra white space*/}
                     <CustomPopup
                                 onClose={popupCloseHandler}
                                 show={visibility}
@@ -102,7 +98,6 @@ const Login = () => {
                             >
                                 {message}
                             </CustomPopup>
-                    {/* <p className={message === "" ? "" : "form-message"}>{message} </p> */}
                     <p className="footer-login-text">
                         don't have an account?
                         <span
