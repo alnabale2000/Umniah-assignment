@@ -1,0 +1,97 @@
+.overlay {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+    transition: opacity 500ms;
+}
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 60%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+.popup .close:hover {
+    cursor: pointer;
+    color: #000;
+}
+.popup .content {
+    max-height: 30%;
+    overflow: auto;
+}
+
+.pop-up-content {
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.app-info-inputs {
+    text-align: start;
+    padding-left: 10%;
+    padding-top: 20px;
+}
+
+.app-info-input {
+    margin-top: 4px;
+    width: 80%;
+    height: 32px;
+    justify-self: start;
+    padding-left: 5px;
+    border: 0.8px #56b2e5 solid;
+}
+
+.pop-ub-button {
+    width: 50%;
+    margin: 20px;
+}
+
+.pop-up-message {
+    font-size: 20px;
+    font-weight: bold;
+    color: #56b2e5;
+}
+
+@media screen and (max-width: 576px) {
+    .pop-ub-button {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .popup {
+        width: 70%;
+    }
+    .pop-ub-button {
+        width: 67%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .popup {
+        width: 600px;
+    }
+}
