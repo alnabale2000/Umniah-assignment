@@ -15,6 +15,13 @@ const usersActivityRouter= require("./routers/routes/user_activity")
 //third-party middleware
 app.use(cors());
 
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.header("Access-Control-Allow-Methods", "GET, POST,PUT, OPTIONS");
+    next();
+});
+
 //app routers
 app.use(usersRouter);
 app.use(authRouter);
