@@ -18,6 +18,17 @@ const createNewAccount = async (req, res) => {
     }
 };
 
+const getUserData = (req,res)=>{
+    const id=req.params.id;
+    const query= 'SELECT username,email,phoneNumber FROM users WHERE id =?;';
+    const data=[id];
+    connection.query(query,data,(err,result)=>{
+        if(err) res.status(404).json(err)
+        res.status(200).json(result)
+    });
+}
+
 module.exports = {
     createNewAccount,
+    getUserData,
 };
