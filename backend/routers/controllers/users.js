@@ -11,6 +11,7 @@ const createNewAccount = async (req, res) => {
         connection.query(query, data, (err, result) => {
             if (err) res.status(404).json(err);
             res.status(201).json("User Added");
+            
         });
     } catch (error) {
         console.log(error);

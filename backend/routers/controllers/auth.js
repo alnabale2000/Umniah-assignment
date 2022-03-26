@@ -9,7 +9,6 @@ const login = async (req, res) => {
 
     connection.query(query, data, async (err, result) => {
         // Check if the email exist
-        console.log('result', result);
         try {
             const email = result[0].email;
         } catch (error) {
@@ -30,7 +29,7 @@ const login = async (req, res) => {
             const options = {
                 expiresIn: "60m",
             };
-
+            
             return res.status(200).json({ token: jwt.sign(payload, process.env.SECRET, options) });
         }
         console.log("err", err);
@@ -38,6 +37,9 @@ const login = async (req, res) => {
         res.status(403).json("The password you’ve entered is incorrect");
     });
 };
+
+
+
 
 module.exports = {
     login,
