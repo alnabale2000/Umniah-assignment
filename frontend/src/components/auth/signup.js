@@ -25,7 +25,13 @@ const SignUp = () => {
                     })
                     .then((response) => {
                         if (response) {
+                            console.log('response', response.data);
                             setMessage("The user has been created successfully ");
+
+                            // Add Registration To User Activities
+                            // axios.post("http://localhost:8000/user-activity",{
+
+                            // })
                             setTimeout(()=> {
                                 navigate("/login");
                             }, 2000);

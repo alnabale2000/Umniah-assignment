@@ -18,7 +18,7 @@ const addActivity =(req,res)=>{
     const data=[userId,type,time,details]
     connection.query(query,data,(err,result)=>{
         if(err)res.status(404).json(err)
-        res.status(201).json(result);
+        res.status(201).json(userId);
     })
 }
 

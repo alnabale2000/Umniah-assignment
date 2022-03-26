@@ -37,12 +37,16 @@ const Login = () => {
                 const user = jwt_decode(result.data["token"]);
                 if (result) {
                     dispatch(setToken({ token: result.data["token"], user }));
-
                     localStorage.setItem("token", result.data["token"]);
+                    
                     localStorage.setItem("id", user.userId);
 
-                    // setMessage("The user has been loggedIn successfully ");
-
+                            // Add Registration To User Activities
+                            axios.post("http://localhost:8000/user-activity",{
+                                userId:user.userId,
+                                type:'Log in',
+                                details:'No Details'
+                            })
                     if (user.type === "user") {
                         navigate("/");
                         dispatch(setStatus(true));
