@@ -33,11 +33,11 @@ const Navigation = () => {
 
     const loggedOut = async () => {
       // Add Logout To User Activities
-      await axios.post("http://localhost:8000/user-activity",{
-        userId:id,
-        type:'Log Out',
-        details:'No Details'
-      })
+        await axios.post("http://localhost:8000/user-activity",{
+            userId:id,
+            type:'Log Out',
+            details:'No Details'
+        })
 
         //clear localStorage and update the state
         localStorage.clear();
@@ -50,31 +50,30 @@ const Navigation = () => {
         navigate(endPoint);
     };
     return (
-        <nav className="navbar ">
-            <div>
-              
-              <h1
-                  className="title"
-                  onClick={() => {
-                    goTo("/");
-                  }}
-              >
-                Home
-              </h1>
+        <nav className="navbar flex-box space-b">
+            <div>             
+                <h1
+                    className="title"
+                    onClick={() => {
+                        goTo("/");
+                    }}
+                >
+                    Home
+                </h1>
             </div>
             {state.isLoggedIn ? (
-                        <h1 className="link" onClick={loggedOut}>
-                            log out
-                        </h1>
+                <h1 className="link" onClick={loggedOut}>
+                    log out
+                </h1>
             ) : (
-                        <h1
-                            className="link"
-                            onClick={() => {
-                                goTo("/signup");
-                            }}
-                        >
-                            Sign Up
-                        </h1>
+                <h1
+                    className="link"
+                    onClick={() => {
+                        goTo("/signup");
+                    }}
+                >
+                    Sign Up
+                </h1>
             )}
         </nav>
     );

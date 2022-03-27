@@ -1,3 +1,4 @@
+import "./App.css";
 import React from 'react';
 import { Route, Routes } from "react-router-dom";
 import SignUp from "./components/auth/signup";
@@ -14,6 +15,7 @@ const App = () => {
 			<Route exact path ='/login' element={<Login/>}/>
 			<Route exact path ='/signup' element={<SignUp/>}/>
 			<Route path='/dashboard' element={<ActivityPage/>}/>
+			<Route exact path='/' element={<SignUp/>} />
 		</Routes>
 	</div>;
 };

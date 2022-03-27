@@ -1,4 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+@import "styles/navbar.css";
 .App {
   text-align: center;
-  justify-content: center;
+  font-family: "Nanum Gothic", sans-serif;
+
 }
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.flex-box {
+  display: flex;
+}
+
+.baseline {
+  align-items: baseline;
+}
+
+.space-b {
+  justify-content: space-between;
+}
+
+/* .flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+} */
+
+
+
+
+
+
