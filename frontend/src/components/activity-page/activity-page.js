@@ -4,7 +4,7 @@ import Activity from './user-activity';
 
 const ActivityPage = () => {
     return (
-        <main>
+        <main className='activity-page'>
             <UserInfo/>
             <Activity/>
         </main>

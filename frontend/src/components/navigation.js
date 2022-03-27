@@ -55,7 +55,7 @@ const Navigation = () => {
                 <h1
                     className="title"
                     onClick={() => {
-                        goTo("/");
+                        // goTo("/");
                     }}
                 >
                     Home

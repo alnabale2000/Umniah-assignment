@@ -15,7 +15,7 @@ const UserInfo = () => {
         setData(result.data[0]);
     }
     return (
-        <aside>
+        <aside className='user-info'>
             {data?(
                 <div>
                     <p>Email: {data.email} </p>

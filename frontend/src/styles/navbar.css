@@ -9,12 +9,10 @@
     color: white;
   }
   
-  .links {
-    padding-right: 20px;
-  }
+  
   
   .link {
-    padding: 0 2.5px 0 8.5px;
+    padding: 0 20px 0 8.5px;
     transition-duration: 300ms;
     color: white;
   }
@@ -30,8 +28,4 @@
     transition-duration: 200ms;
   }
   
-  @media (min-width: 576px) {
-    .link {
-        padding: 0 7.5px 0 7.5px;
-    }
-  }
+ 

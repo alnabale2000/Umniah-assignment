@@ -91,8 +91,10 @@
 }
 
 .form-message {
-    color: #E2E42B;
+    color: #000000;
     padding-bottom: 15px;
+    font-size: 18px;
+    transition-duration: 250ms;
 }
 @media (min-width: 576px) {
     .login-body {

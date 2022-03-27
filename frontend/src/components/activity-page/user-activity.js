@@ -16,22 +16,20 @@ const Activity = () => {
     
     
     return (
-        <section className='activity-container'>
-            <div>
-                <h4>Activity Type</h4>
-                <h4>Date</h4>
-                <h4>More Details</h4>
-            </div>
+        <div className='activity-container'>
+            <header className='flex-box space-b'>
+                <h4 className='act-title'>Activity Type</h4>
+                <h4 className='act-title'>Date</h4>
+                <h4 className='act-title'>More Details</h4>
+            </header>
             {activities && activities.map((activity)=>(
-                <div key={activity.id}>
-                    <h5>{activity.activity_type}</h5>
-                    <h5>{activity.created_at}</h5>
-                    <h5>{activity.more_details}</h5>
+                <div className ='flex-box space-b' key={activity.id}>
+                    <p className='act-info'>{activity.activity_type}</p>
+                    <p className='act-info'>{activity.created_at}</p>
+                    <p className='act-info'>{activity.more_details}</p>
                 </div>
-
-            ))}
-            
-        </section>
+            ))}        
+        </div>
     )
 }
 

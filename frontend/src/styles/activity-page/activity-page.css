@@ -1,0 +1,11 @@
+@import "./activity.css";
+@import "./user-data.css";
+
+.activity-page{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 0;
+    
+}
+
