@@ -115,14 +115,14 @@ const SignUp = () => {
                     {/* Avoiding extra white space*/}
                     <p className={message === "" ? "" : "form-message"}>{message} </p>
                     <p className="footer-login-text">
-                        Already Have An Account?
+                        Already Have An Account? 
                         <span
                             className="switch-link"
                             onClick={() => {
                                 navigate("/login");
                             }}
                         >
-                            login
+                            {" "}Login
                         </span>
                     </p>
                 </form>
