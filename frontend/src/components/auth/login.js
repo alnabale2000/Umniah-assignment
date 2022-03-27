@@ -17,7 +17,7 @@ const Login = () => {
     const [visibility, setVisibility] = useState(false);
 
 
-    const openPopUb = (sellerId, sellerName) => {
+    const openPopUb = () => {
         //re-setState
         if (toggleConfirmButton === false) setToggleConfirmButton(true);
         

@@ -30,7 +30,7 @@ const SignUp = () => {
                         const userId= result.data[0].id
                                     
                         // Add Registration To User Activities
-                        axios.post("http://localhost:8000/user-activity",{
+                        await axios.post("http://localhost:8000/user-activity",{
                             userId,
                             type:'Account Created',
                             details:'No Details'
