@@ -48,7 +48,7 @@ const Login = () => {
                                 details:'No Details'
                             })
                     if (user.type === "user") {
-                        navigate("/");
+                        navigate("/dashboard");
                         dispatch(setStatus(true));
                     } else {
                         // If we had another type of clients we can navigate here.

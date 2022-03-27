@@ -21,6 +21,7 @@ const SignUp = () => {
                             username,
                             email,
                             password,
+                            phoneNumber,
                 });
                 if(response){
                         console.log('response', response.data);
