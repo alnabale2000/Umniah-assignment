@@ -9,3 +9,21 @@
     
 }
 
+@media (min-width:992px) {
+    .activity-page {
+        justify-items: start;
+        display: flex;
+        /* padding-top: 10%; */
+    }
+    .user-info {
+        width: 30%;
+        border-radius: 12.5px;
+        border: 0.5px grey solid;
+    }
+    .activity-container{
+        width: 68%;
+        border-radius: 12.5px;
+        border: 0.5px grey solid;
+    }
+
+}

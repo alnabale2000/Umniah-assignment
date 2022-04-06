@@ -1,4 +1,4 @@
-.login-body {
+.form-body {
     height: 100%;
     width: 100%;
     margin: 0;
@@ -9,7 +9,7 @@
     align-content: center;
 }
 
-.login-box {
+.form-box {
     padding-top: 1px;
     padding-bottom: 15px;
     height: 100%;
@@ -18,16 +18,26 @@
     justify-self: center;
 }
 
-.login-input-box {
+.email-form {
+    padding-top: 1px;
+    padding-bottom: 15px;
+    height: 50%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    justify-self: center;
+}
+
+.form-input-box {
     text-align: start;
     margin: 30px 10% 30px 10%;
 }
+
 /* for login-input-box*/
 .margin-edit {
     margin: 17.5px 10% 17.5px 10%;
 }
 
-.login-input {
+.form-input {
     width: 100%;
     margin-top: 4px;
     height: 32px;
@@ -39,16 +49,21 @@
     padding-left: 7.5px;
 }
 
-.login-label {
+.form-label {
     color: #c2c51f;
 }
 
-.login-top-text {
+.form-top-text {
     color: #E2E42B;
     padding: 50px 0 30px 0;
 }
 
-.login-submit-btn {
+.email-top-text {
+    padding: 50px 0 15px 0;
+}
+
+
+.form-submit-btn {
     width: 150px;
     background-color: white;
     color: #E2E42B;
@@ -61,7 +76,7 @@
     box-shadow: 1px 6px 7px -3px #a6bb3257;
 }
 
-.login-submit-btn:hover {
+.form-submit-btn:hover {
     cursor: pointer;
     color: white;
     background-color: #c2c51f;
@@ -76,14 +91,20 @@
     background-color: grey;
 }
 
-.footer-login-text {
+.footer-form-text {
     font-size: 20px;
     margin: 5px 10px 50px 10px;
+}
+
+.reset {
+    font-size: 18px;
+    margin: 5px 10px 10px 10px;
 }
 
 .switch-link {
     color: #c2c51f;
 }
+
 .switch-link:hover {
     color: #656e10;
     transition-duration: 200ms;
@@ -96,40 +117,64 @@
     font-size: 18px;
     transition-duration: 250ms;
 }
+
 @media (min-width: 576px) {
-    .login-body {
+    .form-body {
         overflow-x: hidden;
     }
+
     .fixed {
         position: fixed;
         overflow-y: scroll;
         overflow-x: hidden;
     }
 
-    .login-box {
+    .form-box {
         margin: 20px 5% 10px 5%;
         border-radius: 20px;
         height: 85%;
         box-shadow: 2px 5px 10px 7px rgba(234, 255, 115, 0.311);
     }
+
+    .email-form {
+        margin: 100px 5% 10px 5%;
+        height: 50%;
+    }
+
 }
 
 @media (min-width: 768px) {
-    .login-box {
+    .form-box {
         margin: 30px 15% 20px 15%;
         height: 80%;
+    }
+
+    .email-form {
+        margin-top: 100px;
+        height: 50%;
     }
 }
 
 @media (min-width: 992px) {
-    .login-box {
+    .form-box {
         margin: 30px 20% 20px 20%;
         height: 80%;
     }
+
+    .email-form {
+        margin-top: 100px;
+        height: 50%;
+    }
 }
+
 @media (min-width: 1200px) {
-    .login-box {
+    .form-box {
         margin: 30px 30% 20px 30%;
         height: 80%;
+    }
+
+    .email-form {
+        margin-top: 100px;
+        height: 50%;
     }
 }

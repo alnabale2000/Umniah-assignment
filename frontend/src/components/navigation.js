@@ -42,6 +42,8 @@ const Navigation = () => {
         //clear localStorage and update the state
         localStorage.clear();
         dispatch(setToken({ token: "", user }));
+        console.log('user', user);
+
         navigate("/");
 
 
@@ -55,7 +57,7 @@ const Navigation = () => {
                 <h1
                     className="title"
                     onClick={() => {
-                        // goTo("/");
+                        // TODO: Go to home page
                     }}
                 >
                     Home

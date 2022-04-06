@@ -10,7 +10,7 @@
     transition: opacity 500ms;
 }
 .popup {
-    margin: 40% auto;;
+    margin: 300px 20% 0 20%;
     padding: 40px 20px 20px 20px;
     box-sizing: border-box;
     background: #fff;

@@ -12,9 +12,9 @@ app.use(express.json());
 const usersRouter = require("./routers/routes/users");
 const authRouter = require ("./routers/routes/auth");
 const usersActivityRouter= require("./routers/routes/user_activity")
+
 //third-party middleware
 app.use(cors());
-
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");

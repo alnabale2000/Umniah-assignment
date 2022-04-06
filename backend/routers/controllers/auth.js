@@ -15,7 +15,6 @@ const login = async (req, res) => {
             res.status(403).json("The email doesn't exist");
         }
 
-        const username = result[0].username;
         const pass = result[0].pass;
         const id = result[0].id;
 
@@ -32,13 +31,9 @@ const login = async (req, res) => {
             
             return res.status(200).json({ token: jwt.sign(payload, process.env.SECRET, options) });
         }
-        console.log("err", err);
-
         res.status(403).json("The password you’ve entered is incorrect");
     });
 };
-
-
 
 
 module.exports = {

@@ -38,7 +38,6 @@ const Login = () => {
                 if (result) {
                     dispatch(setToken({ token: result.data["token"], user }));
                     localStorage.setItem("token", result.data["token"]);
-                    
                     localStorage.setItem("id", user.userId);
 
                             // Add Login To User Activities
@@ -66,43 +65,54 @@ const Login = () => {
     };
 
     return (
-        <main className="login-body fixed">
-            <div className="login-box">
-                <h2 className="login-top-text">LOGIN</h2>
+        <main className="form-body fixed">
+            <div className="form-box">
+                <h2 className="form-top-text">LOGIN</h2>
                 <form onSubmit={handleSubmit}>
-                    <div className="login-input-box">
-                        <label className="login-label">Email</label>
+                    <div className="form-input-box">
+                        <label className="form-label">Email</label>
                         <br />
                         <input
-                            className="login-input"
+                            className="form-input"
                             type="email"
                             onChange={(e) => setEmail(e.target.value)}
                             required
                         />
                     </div>
-                    <div className="login-input-box">
-                        <label className="login-label">Password</label>
+                    <div className="form-input-box">
+                        <label className="form-label">Password</label>
                         <br />
                         <input
-                            className="login-input"
+                            className="form-input"
                             type="password"
                             onChange={(e) => setPassword(e.target.value)}
                             required
                         />
                     </div>
-                    <button onSubmit={handleSubmit} className="login-submit-btn">
+                    <button onSubmit={handleSubmit} className="form-submit-btn">
                         SUBMIT
                     </button>
                     <div className="divider"></div>
 
                     <CustomPopup
-                                onClose={popupCloseHandler}
-                                show={visibility}
-                                title="Warning"
-                            >
-                                {message}
-                            </CustomPopup>
-                    <p className="footer-login-text">
+                        onClose={popupCloseHandler}
+                        show={visibility}
+                        title="Warning"
+                    >
+                        {message}
+                    </CustomPopup>
+                    <p className="footer-form-text reset">
+                        forget your password?
+                        <span
+                            className="switch-link"
+                            onClick={() => {
+                                navigate("/reset-password");
+                            }}
+                        >
+                            Reset
+                        </span>
+                    </p>
+                    <p className="footer-form-text">
                         don't have an account?
                         <span
                             className="switch-link"

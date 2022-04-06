@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
 @import "styles/navbar.css";
-@import "styles/login&signup-forms.css";
+@import "styles/forms.css";
 @import "styles/activity-page/activity-page.css";
 
 
@@ -32,9 +32,3 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
 } */
-
-
-
-
-
-

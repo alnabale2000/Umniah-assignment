@@ -62,59 +62,59 @@ const SignUp = () => {
     };
 
     return (
-        <main className="login-body">
-            <div className="login-box">
-                <h2 className="login-top-text">SIGN UP</h2>
+        <main className="form-body">
+            <div className="form-box">
+                <h2 className="form-top-text">SIGN UP</h2>
                 <form onSubmit={handleSubmit}>
-                    <div className="login-input-box">
-                        <label className="login-label">Email</label>
+                    <div className="form-input-box">
+                        <label className="form-label">Email</label>
                         <br />
                         <input
-                            className="login-input"
+                            className="form-input"
                             type="email"
                             onChange={(e) => setEmail(e.target.value)}
                             required
                         />
                     </div>
-                    <div className="login-input-box">
-                        <label className="login-label">Password</label>
+                    <div className="form-input-box">
+                        <label className="form-label">Password</label>
                         <br />
 
                         <input
-                            className="login-input"
+                            className="form-input"
                             type="password"
                             onChange={(e) => setPassword(e.target.value)}
                             required
                         />
                     </div>
-                    <div className="login-input-box">
-                        <label className="login-label">Username</label>
+                    <div className="form-input-box">
+                        <label className="form-label">Username</label>
                         <br />
                         <input
-                            className="login-input"
-                            type="text"
+                            className="form-input"
+                            type="text"form
                             onChange={(e) => setUsername(e.target.value)}
                             required
                         />
                     </div>
-                    <div className="login-input-box">
-                        <label className="login-label">PhoneNumber</label>
+                    <div className="form-input-box">
+                        <label className="form-label">PhoneNumber</label>
                         <br />
                         <input
-                            className="login-input"
+                            className="form-input"
                             type="text"
                             onChange={(e) => setPhoneNumber(e.target.value)}
                             required
                         />
                     </div>
-                    <button onClick={handleSubmit} className="login-submit-btn">
+                    <button onClick={handleSubmit} className="form-submit-btn">
                         SUBMIT
                     </button>
                     <div className="divider"></div>
 
                     {/* Avoiding extra white space*/}
                     <p className={message === "" ? "" : "form-message"}>{message} </p>
-                    <p className="footer-login-text">
+                    <p className="footer-form-text">
                         Already Have An Account? 
                         <span
                             className="switch-link"
